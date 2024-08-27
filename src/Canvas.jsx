@@ -1,4 +1,4 @@
-import { Book } from './components/Book';
+import { Movie } from './components/Movie';
 import { Header } from './components/Header';
 import styled, {keyframes} from 'styled-components';
 import whitenoise from '../src/assets/images/noise.webp'
@@ -28,7 +28,7 @@ const NoiseOverlay = styled.div`
     position: absolute;
     inset: -200%;
     background-image: url(${whitenoise});
-    opacity: 23%;
+    opacity: 25%;
     animation: ${shift} 0.2s linear infinite both;
     pointer-events: none;
 `;
@@ -40,7 +40,7 @@ export const App = () => {
     <Header/>
     <Screen>
       <Content>
-        {/* <Book /> */}
+        <Movie />
       </Content>
       <NoiseOverlay/>
     </Screen>

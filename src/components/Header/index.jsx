@@ -6,22 +6,28 @@ const Wrapper = styled.div`
     display: flex;
     align-items: start;
     background-color: #802c73;
-    height: 50px;
+    height: 40px;
     width: 100%;
-`
+`;
+
 const Title = styled.p`
     font-size: 20px;
     color: #d8d838;
     font-weight: 600;
     align-self: center;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-`
+`;
+
 const Icon = styled.img`
-    height: 40px;
+    height: 35px;
     align-self: center;
     width: auto;
     margin-left: 100px;
-`
+    &:hover{
+        height:42px;
+        transition: 0.3s;
+    }
+`;
 
 export const Header = () => {
     return(
