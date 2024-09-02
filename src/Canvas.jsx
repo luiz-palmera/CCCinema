@@ -1,7 +1,8 @@
 import { Movie } from './components/Movie';
 import { Header } from './components/Header';
 import styled, {keyframes} from 'styled-components';
-import whitenoise from '../src/assets/images/noise.webp'
+import whitenoise from '../src/assets/images/noise.webp';
+import { MovieTitle } from './components/MovieTitle';
 
 
 const shift = keyframes`
@@ -40,6 +41,8 @@ export const App = () => {
     <Header/>
     <Screen>
       <Content>
+        <MovieTitle>
+        </MovieTitle>
         <Movie />
       </Content>
       <NoiseOverlay/>

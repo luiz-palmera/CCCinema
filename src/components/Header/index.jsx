@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import rato from "../../assets/images/Ratos.png"
+import rato from "../../assets/images/Ratos.png";
 
 const Wrapper = styled.div`
     display: flex;
     align-items: start;
     background-color: #802c73;
-    height: 40px;
+    height: 60px;
     width: 100%;
 `;
 
 const Title = styled.p`
     font-size: 20px;
-    color: #d8d838;
+    color: #ecec2f;
     font-weight: 600;
     align-self: center;
     font-family: "Comic Sans MS", "Comic Sans", cursive;

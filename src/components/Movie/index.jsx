@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import front from "../../assets/models/dvd001_cover_front.jpg";
 import back from "../../assets/models/dvd001_cover_back.jpg";
 import side from "../../assets/models/dvd001_cover_side.png";
 import { TextureLoader } from "three";
 
 
-export const Movie = ({position = [-1, 0, 2.5], fov = 40}) => {
+export const Movie = ({position = [1, 0, 1], fov = 70}) => {
     return(
         <Canvas 
             camera ={{position, fov}}
-            style={{width: '700px', height: '400px', marginTop: '130px'}}
+            style={{position: 'absolute', width: '600px', height: '500px', top: 70, left: '-155px'}}
         >
             <MovieModel />
-            <OrbitControls />
         </Canvas>
     )
 };
@@ -31,9 +29,6 @@ const MovieModel = () => {
 
     const meshRef = React.useRef(null);
 
-    const handlePointerDown = () => setIsRotating(false);
-    const handlePointerUp = () => setIsRotating(true);
-
     const textures = [
         new TextureLoader().load(),
         new TextureLoader().load(side),
@@ -46,8 +41,6 @@ const MovieModel = () => {
     return(
         <mesh
             ref={meshRef}
-            onPointerDown={handlePointerDown}
-            onPointerUp={handlePointerUp}
         >
             <boxGeometry args ={[0.9, 1.2, 0.1]}/>
             {textures.map((texture, index) => (
